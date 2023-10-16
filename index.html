@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="text">
+          <p>Software Developer</p>
+          <h1>Hi,<span style="color: rgb(16, 152, 123)">Avni Chauhan</span></h1>
+        </div>
+      </div>
+    </div>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis ad saepe recusandae molestiae. Repudiandae itaque iure
+              ex quas nulla similique a dolor, vel, nihil optio et voluptates,
+              architecto nobis error.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skill')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-content active-tab" id="skill">
+              <ul>
+                <li>Data Structure and Algorithm</li>
+                <li>Full Stack Devloper</li>
+                <li>Database- MySQL,MongoDB</li>
+                <li>Tools - Maven,Git,Docker,Jenkins,Kubernates</li>
+              </ul>
+            </div>
+            <div class="tab-content" id="experience">
+              <ul>
+                <li>Experience</li>
+                <li>Full Stack Devloper</li>
+                <li>Database- MySQL,MongoDB</li>
+                <li>Tools - Maven,Git,Docker,Jenkins,Kubernates</li>
+              </ul>
+            </div>
+            <div class="tab-content" id="education">
+              <ul>
+                <li>Education</li>
+                <li>Full Stack Devloper</li>
+                <li>Database- MySQL,MongoDB</li>
+                <li>Tools - Maven,Git,Docker,Jenkins,Kubernates</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablink = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-content");
+      function opentab(tabname) {
+        for (tabli of tablink) {
+          tabli.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
