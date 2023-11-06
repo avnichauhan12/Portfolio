@@ -147,7 +147,43 @@ width: 50%;
 
 }
 .service-list div:hover{
-    background-color: #7ccfe3;
+    background-color: #c63434;
     transform: translateY(-10px);
 }
-
+.work-list{
+   display: flex;
+   margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    transition: transform 0.5s
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+}
+.btn:hover{
+    background: #ff004f
+}
